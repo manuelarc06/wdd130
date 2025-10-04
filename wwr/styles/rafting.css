@@ -120,7 +120,7 @@ nav a {
 }
 
 h1 {
-    position: absolute;
+    position: static;
     top: 20px;
     width: 100%;
     padding: 16px;
@@ -174,4 +174,138 @@ footer {
 .socialmedia a img {
     width: 32px;
     margin: 0 10px;
+}
+
+/* --- Contac us section --- */
+
+.company-info {
+    text-align: center;
+    margin: 20px auto;
+}
+
+.company-info p {
+    margin: 2px 0;
+    line-height: 1.2;
+}
+
+.contact-map iframe {
+    width: 100%;
+    height: 300px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.contact-container {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.contact-map {
+    flex: 1;
+}
+
+.contact-map iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+    min-height: 400px;
+}
+
+.contact-form {
+    flex: 1;
+}
+
+.contact-form form {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 15px 20px;
+    align-items: center;
+}
+
+.contact-form label {
+    text-align: right;
+    font-weight: bold;
+}
+
+.contact-form input[type="text"], .contact-form input[type="email"], .contact-form textarea  {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.contact-form .message-purpose-label {
+    grid-column: 1 / 2;
+    align-self: start;
+}
+
+.contact-form .message-purpose-option {
+    grid-column: 2 / 3;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.contact-form .message-purpose-option label {
+    font-weight: normal;
+    text-align: left;
+}
+
+.contact-form .message-label {
+    grid-column: 1 / -1;
+    text-align: left;
+}
+
+.contact-form textarea {
+    grid-column: 1 / -1;
+    min-height: 120px;
+}
+
+.contact-form .subscribe {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    gap: 8px
+}
+
+.contact-form button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    grid-column: 1 / -1;
+    justify-self: center;
+}
+
+.contact-form button:hover {
+    background-color: var(--accent1-color);
+}
+
+.employees {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.employee-profiles {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.employee-profiles figure {
+    text-align: center;
+    width: 200px;
+    margin: 0;
+}
+
+.employee-profiles img {
+    width: 180px;
+    height: 180px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
