@@ -1,8 +1,8 @@
 :root {
-    --primary-color: #329be2;
-    --secondary-color: #f4a261;
-    --accent1-color: #0a0594; 
-    --accent2-color: #e9c46a; 
+    --primary-color: #0d6dad;
+    --secondary-color: #b96a28;
+    --accent1-color: #000000; 
+    --accent2-color: #e2b84c; 
 }
 
 header {
@@ -60,7 +60,7 @@ nav a {
 }
 
 .history-content {
-     display: grid;
+    display: grid;
     grid-template-columns: 1fr auto 1fr;
     gap: 20px;
     align-items: center;
@@ -82,7 +82,7 @@ nav a {
 }
 
 .adventure-gallery figure {
-     text-align: center;
+    text-align: center;
     flex: 1;
     min-width: 150px;
 }
@@ -107,7 +107,7 @@ nav a {
     bottom: 20px;
     left: 20px;
     right: 20px;
-    background-color: rgba(38, 70, 83, 0.8);
+    background-color: rgba(23, 43, 51, 0.8);
     color: white;
     padding: 16px;
     border-radius: 8px;
@@ -120,14 +120,22 @@ nav a {
 }
 
 h1 {
-    position: static;
     top: 20px;
     width: 100%;
     padding: 16px;
     text-align: center;
     opacity: 0.7;
-    background-color: var(--accent1-color);
+}
+
+.about-title {
     color: #fff;
+    background-color: var(--accent1-color);
+    position: absolute;
+}
+
+.contact-title {
+    position: static;
+    color: black;
 }
 
 article {
@@ -176,16 +184,24 @@ footer {
     margin: 0 10px;
 }
 
-/* --- Contac us section --- */
+/* --- Contac us section styles --- */
 
 .company-info {
     text-align: center;
-    margin: 20px auto;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.company-info h1 {
+    font-size: 1.5em;
+    margin-bottom: 0px;
+    line-height: 1;
 }
 
 .company-info p {
-    margin: 2px 0;
-    line-height: 1.2;
+    margin: 0;
+    padding: 1px;
+    line-height: 1;
 }
 
 .contact-map iframe {
@@ -218,26 +234,28 @@ footer {
 
 .contact-form form {
     display: grid;
-    grid-template-columns: 150px 1fr;
-    gap: 15px 20px;
-    align-items: center;
+    grid-template-columns: 90px 1fr;
+    gap: 15px 5px;
+    align-items: start;
 }
 
 .contact-form label {
-    text-align: right;
+    display: block;
+    text-align: left;
+    padding-right: 12px;
     font-weight: bold;
 }
 
 .contact-form input[type="text"], .contact-form input[type="email"], .contact-form textarea  {
     width: 100%;
     padding: 8px;
-    border: 1px solid #ccc;
+    border: 1px solid #2b2626;
     border-radius: 6px;
 }
 
 .contact-form .message-purpose-label {
     grid-column: 1 / 2;
-    align-self: start;
+    align-self: center;
 }
 
 .contact-form .message-purpose-option {
@@ -245,6 +263,7 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 8px;
+    align-items: flex-start;
 }
 
 .contact-form .message-purpose-option label {
@@ -253,8 +272,9 @@ footer {
 }
 
 .contact-form .message-label {
-    grid-column: 1 / -1;
-    text-align: left;
+    grid-column: 1 / 2;
+    align-self: center;
+    padding: 6px 8px;
 }
 
 .contact-form textarea {
@@ -308,4 +328,288 @@ footer {
     height: 180px;
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Index or Home section styles --- */
+
+.hero-home {
+    position: relative;
+    max-width: 840px;
+    margin: 0 auto;
+}
+
+.hero-home img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.hero-home article {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    width: auto;
+    text-align: center;
+    background-color: rgba(56, 68, 71, 0.7);
+    padding: 20px 0;
+    color: white;
+    
+}
+
+.hero-home h1 {
+    color: white;
+    margin: 0;
+    font-size: 1.8rem;
+    text-shadow: 1px 1px 2px rgb(15, 12, 12);
+}
+
+.newsleader {
+    background-color: white;
+    padding: 20px;
+    margin: 40px auto;
+    max-width: 840px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.newsleader-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.newsleader-form label {
+    font-weight: bold;
+}
+
+.newsleader-form input[type="text"], .newsleader-form input[type="email"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.newsleader-form button {
+    align-self: flex-start;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.newsleader-form button:hover {
+    background-color: var(--accent1-color);
+}
+
+.info-grid {
+    max-width: 840px;
+    margin: 40px auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.info-item {
+    flex: 1 1 45%;
+    text-align: center;
+}
+
+.info-item img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+.info-item p {
+    font-size: 1rem;
+    color: var(--accent1-color);
+    padding: 0 10px;
+
+}
+
+.call-to-action {
+    margin: 40px auto;
+    max-width: 840px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.call-to-action h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.cta-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.cta-content img {
+    width: 300px;
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.cta-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cta-text p {
+    font-size: 1rem;
+    color: var(--accent1-color);
+    margin-bottom: 12px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 12px 150px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.cta-button:hover {
+    background-color: var(--accent1-color);
+}
+
+/* --- Trip section styles --- */
+
+
+.cta-content-row {
+    max-width: 840px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.cta-title {
+    background-color: var(--primary-color); 
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 0px;
+    text-align: center;
+    opacity: 1 !important;
+}
+
+.trip-descriptions > h2 {
+    width: 100%; 
+    max-width: 840px;
+    margin: 0 0 20px 0; 
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 6px;
+    text-align: center;
+    display: block;
+}
+
+.trip-descriptions {
+    max-width: 840px;
+    margin: 0 auto 40px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.trip {
+    flex: none; 
+    width: 100%; 
+    background-color: white;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.trip:hover {
+    transform: translateY(-5px);
+}
+
+.trip img {
+    width: 100%;
+    height: auto;
+}
+
+.trip-info {
+    padding: 16px;
+}
+
+.trip-info h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.trip-table {
+    margin: 40px auto;
+    max-width: 840px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.trip-table h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px;
+    border-radius: 6px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.btn {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--accent1-color);
 }
